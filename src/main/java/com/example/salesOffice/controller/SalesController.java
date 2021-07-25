@@ -1,6 +1,7 @@
 package com.example.salesOffice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.salesOffice.entity.Sales;
 import com.example.salesOffice.service.SalesRepository;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class SalesController {
 	

@@ -3,6 +3,7 @@ package com.example.salesOffice.controller;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import com.example.salesOffice.entity.Employee;
 import com.example.salesOffice.service.EmployeeRepository;
 import com.example.salesOffice.service.EmployeeService;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class EmployeeController {
 	
@@ -28,7 +30,7 @@ public class EmployeeController {
 	@GetMapping(value ="/getEmployes")
 	public Iterable<Employee> getEmployess() {
 		//return employeeService.getAllEmployees();
-		employeeService.getAllEmployees(repo.findAll());
+		//employeeService.getAllEmployees(repo.findAll());
 		return repo.findAll();
 	}
 	
